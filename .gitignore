@@ -1,1 +1,50 @@
 .env
+package.json
+package-lock.json
+node_modules/
+
+# --- DEPENDENCIES ---
+# On ne versionne jamais les paquets installés
+node_modules/
+.pnp
+.pnp.js
+
+# --- BUILD OUTPUT ---
+# Les dossiers générés après la compilation
+dist/
+build/
+out/
+.next/
+
+# --- LOGS ---
+# Utile pour débugger les erreurs d'installation sans polluer le repo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- ENVIRONMENT VARIABLES ---
+# TRÈS IMPORTANT : Ne jamais commit tes clés d'API ou secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- TESTING ---
+# Couverture de tests
+coverage/
+__snapshots__/
+
+# --- IDE / EDITOR ---
+# Configuration spécifique à ton éditeur (VS Code, JetBrains, etc.)
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# --- TYPESCRIPT ---
+# Si tu utilises la fonctionnalité build info de TS
+*.tsbuildinfo

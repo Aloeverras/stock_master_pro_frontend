@@ -1,6 +1,5 @@
 .devcontainer
 devcontainer.json
-.git
 Dockerfile
 .env
 .gitignore
