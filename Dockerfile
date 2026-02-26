@@ -1,10 +1,7 @@
-ARG JSPACK="package.json"
-ARG WORKDIR="/workspace"
-
-FROM alpine:3.23.3 AS builder
-ARG JSPACK
-ARG WORKDIR
-WORKDIR $WORKDIR
-COPY . .
+FROM alpine:3.23.3 
+ARG PACKAGES
 RUN apk update && \
-    apk upgrade
+    apk add ${PACKAGES} && \
+    apk upgrade && \
+    rm -rf /var/cache/apk/*
+CMD ["/bin/sh"]

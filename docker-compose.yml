@@ -1,0 +1,21 @@
+services:
+  node_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args: 
+        PACKAGES : "nodejs"
+
+  npm_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args: 
+        PACKAGES : "npm"      
+
+  git_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args: 
+        PACKAGES : "git"         
