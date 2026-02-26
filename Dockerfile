@@ -35,7 +35,9 @@ RUN /bin/sh -c set -eux && \
     adduser -D -u ${USERID} -G ${GROUPNAME} ${USERNAME} && \
     rm -rf /var/cache/apk/*
 
-WORKDIR ${WORKSPACENAME}   
+WORKDIR ${WORKSPACENAME} 
+
+COPY . .
 
 USER ${USERID}:${GROUPID}
 

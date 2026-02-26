@@ -1,0 +1,12 @@
+{
+    "name" : "stock_master_pro_frontend",
+    "dockerComposeFile" : "docker-compose.yml",
+    "service" : "devcontainer",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [],
+            "settings": {}
+        }
+    }
+}

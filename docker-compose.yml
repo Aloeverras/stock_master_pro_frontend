@@ -5,17 +5,20 @@ services:
       dockerfile: Dockerfile
       args: 
         PACKAGES : "nodejs"
+        PORT : 3000
 
   npm_service:
     build:
       context: .
       dockerfile: Dockerfile
       args: 
-        PACKAGES : "npm"      
+        PACKAGES : "npm" 
+        PORT: 3000     
 
-  git_service:
+  devcontainer:
     build:
       context: .
       dockerfile: Dockerfile
       args: 
-        PACKAGES : "git"         
+        PACKAGES : "git"  
+        PORT : 4000       
