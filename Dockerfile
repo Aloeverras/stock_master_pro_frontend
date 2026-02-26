@@ -32,14 +32,13 @@ RUN /bin/sh -c set -eux && \
     apk upgrade && \
     # création de l'user et de son groupe
     addgroup -g ${GROUPID} ${GROUPNAME} && \
-    adduser -D -u ${USERID} -G ${GROUPNAME} ${USERNAME} && \
+    adduser -D -u ${USERID} -G ${GROUPNAME}  ${USERNAME} && \
+    chown -R "${USERID}:${GROUPID}" "${WORKSPACENAME}" && \
     rm -rf /var/cache/apk/*
 
 WORKDIR ${WORKSPACENAME} 
 
-COPY . .
-
-USER ${USERID}:${GROUPID}
+USER ${USERNAME}
 
 ARG PORT=3000
 

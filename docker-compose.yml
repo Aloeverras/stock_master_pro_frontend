@@ -1,24 +1,39 @@
 services:
   node_service:
+    tty: true
     build:
       context: .
       dockerfile: Dockerfile
       args: 
         PACKAGES : "nodejs"
         PORT : 3000
+    volumes:
+      - .:/workspace    
+    ports:
+      - "3000:3000"    
 
   npm_service:
+    tty: true
     build:
       context: .
       dockerfile: Dockerfile
       args: 
         PACKAGES : "npm" 
-        PORT: 3000     
+        PORT: 2000   
+    volumes:
+      - .:/workspace    
+    ports:
+      - "2000:2000"      
 
   devcontainer:
+    tty: true
     build:
       context: .
       dockerfile: Dockerfile
       args: 
         PACKAGES : "git"  
-        PORT : 4000       
+        PORT : 4000  
+    volumes:
+      - .:/workspace    
+    ports:
+      - "4000:4000"         
