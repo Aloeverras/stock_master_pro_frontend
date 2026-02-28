@@ -2,8 +2,9 @@ import { defineConfig} from 'vite';
 import viteReact from '@vitejs/plugin-react';
 import dtsPlugin from "vite-plugin-dts";
 
-const port : number = 4000;
-const host : string = "0.0.0.0";
+// configuration de vite pour la construction du project
+const PORT : number = 4000;
+const HOST : string = "0.0.0.0";
 
 export default defineConfig({
     // les plugings pour la construction du project
@@ -26,13 +27,33 @@ export default defineConfig({
         })
     ],
     server : {
-        host : host,
-        port : port
+        host : HOST,
+        port : PORT
     },
     build : {
         // format de sortie et es le module des navigateur web
         target : "esnext",
         // fichier d'arriver apres translations
         outDir : "./dist",
+        lib : {
+            entry : "./src/index.ts",
+            name : "stock-chart",
+            formats : ["es", "umd"]
+        },
+        rollupOptions : {
+            input : {
+                app : "./index.html",
+                index : "./src/index.ts"
+            },
+            output : [
+                {
+                    format : "es",
+                    entryFileNames : (assetInfo) => {
+                        return assetInfo.name === "index.js" ? "index.js" : "assets/[name].js";
+                    },
+                    assetFileNames : "assets/[name][extname]"
+                }
+            ]
+        }
     }
 });

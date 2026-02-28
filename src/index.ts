@@ -1,1 +1,3 @@
-console.log("Hello world !");
+import console from "node:console";
+
+console.log("Hello world!");
