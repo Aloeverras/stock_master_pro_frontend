@@ -1,0 +1,9 @@
+$mainAlign : center;
+$sizeMain : 2.5em;
+$weightMain : bold;
+
+#mainTitle {
+    text-align: $mainAlign;
+    font-size : $sizeMain;
+    font-weight: $weightMain;
+}

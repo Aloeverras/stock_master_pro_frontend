@@ -19,7 +19,7 @@ ARG PACKAGES
 RUN /bin/sh -c set -eux && \
     mkdir -p ${WORKSPACENAME} && \
     apk update && \
-    apk add ${PACKAGES} && \
+    apk add curl && \
     # conditionner sir l'arg est avec un string
     if [ -n "${PACKAGES}" ]; then \
         # lancer la boucle si les packages sont plussierurs 

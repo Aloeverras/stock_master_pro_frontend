@@ -1,10 +1,28 @@
-import "../css/App.css";
-import { FC } from "react";
+import "../css/App.scss";
+import { FC, useState } from "react";
+import { MainTittle } from "./components/MainTittle";
+import { ScriptComponent } from "./components/ScriptComponent";
 
 export const App : FC = () => {
-    return (
+
+    const [tittle, setTitlle] = useState<string>("stocker master");
+
+    if (!tittle) {
+        setTitlle("default tittle");
+    };
+
+    if (tittle) {
+        return (
         <>
-            <h1>Hello world!</h1>
-        </>
-    );
+            <header></header>
+            <main>
+                <MainTittle tittle={tittle}></MainTittle>
+                <ScriptComponent></ScriptComponent>
+            </main>
+            <footer></footer>
+        </>  
+        );
+    } else {
+        throw new Error("Tittle is not defined");
+    };
 }

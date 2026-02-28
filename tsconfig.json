@@ -1,14 +1,17 @@
 {
     "compilerOptions" : {
         "target" : "esnext",
-        "module" : "nodenext",
+        "module" : "esnext",
         "strict" : true,
         "esModuleInterop": true,
-        "moduleResolution": "nodenext",
+        "moduleResolution": "bundler",
         "outDir": "./dist",
         "rootDir": "./src",
         "noEmit": true,
-        "jsx": "react-jsx"
+        "jsx": "react-jsx",
+        "lib" : ["DOM", "ESNext"],
+        "declaration": true,
+        "declarationDir": "./dist/types"
     },
     "include" : [
         "src/**/*"

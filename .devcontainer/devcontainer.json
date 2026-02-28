@@ -1,12 +1,22 @@
 {
     "name" : "stock_master_pro_frontend",
-    "dockerComposeFile" : "docker-compose.yml",
+    "dockerComposeFile" : "../docker-compose.yml",
     "service" : "devcontainer",
     "workspaceFolder": "/workspace",
     "customizations": {
         "vscode": {
-            "extensions": [],
-            "settings": {}
+            "extensions": [
+                "ms-vscode.vscode-typescript-next",
+                "burkeholland.simple-react-snippets",
+                "ms-vscode.js-debug-nightly",
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "sh",
+                "editor.formatOnSave": true,
+                "typescript.autoClosingTags": true
+            }
         }
     }
 }
