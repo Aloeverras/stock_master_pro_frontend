@@ -1,10 +1,13 @@
 import { defineConfig} from 'vite';
 import viteReact from '@vitejs/plugin-react';
 import dtsPlugin from "vite-plugin-dts";
+import eslintPlugin from "vite-plugin-eslint";
 
 // configuration de vite pour la construction du project
 const PORT : number = 4000;
 const HOST : string = "0.0.0.0";
+
+const ESMODE : string = "esnext";
 
 export default defineConfig({
     // les plugings pour la construction du project
@@ -24,6 +27,11 @@ export default defineConfig({
             entryRoot : "./src",
             insertTypesEntry : true,
             outDir: './dist/assets/types',
+        }),
+        eslintPlugin({
+            cache : false,
+            failOnError : true,
+            failOnWarning: false
         })
     ],
     server : {
@@ -32,13 +40,12 @@ export default defineConfig({
     },
     build : {
         // format de sortie et es le module des navigateur web
-        target : "esnext",
+        target : ESMODE,
         // fichier d'arriver apres translations
         outDir : "./dist",
         lib : {
             entry : "./src/index.ts",
-            name : "stock-chart",
-            formats : ["es", "umd"]
+            name : "stock-chart"
         },
         rollupOptions : {
             input : {
