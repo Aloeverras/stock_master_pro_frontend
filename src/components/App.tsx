@@ -1,17 +1,29 @@
+import "../scss/App.scss";
 import React from "react";
+import { AppStockerType } from "../types/AppStockerType";
 
 
-const App : React.FC = () => {
-
-    const GET_TITTLE = () : string => "scoker master";
+const App : React.FC<AppStockerType> = (props : AppStockerType) => {
 
     return (
         <>
             <header>
-                <h1>{GET_TITTLE()}</h1>
+                <h1>
+                    {
+                        props.header.title
+                    }
+                </h1>
             </header>
-            <main></main>
-            <footer></footer>
+            <main>
+                {
+                    props.main.buttons.map((button : { text : string}, index : number) => (
+                        <button key={index}>{button.text}</button>
+                    ))
+                }
+            </main>
+            <footer>
+                {props.footer.text}
+            </footer>
         </>
     );
     

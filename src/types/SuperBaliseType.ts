@@ -1,0 +1,1 @@
+export type SuperBaliseType = "header" | "main" | "footer";
