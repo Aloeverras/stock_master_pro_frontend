@@ -7,6 +7,7 @@ const StockBadge : React.FC<StockBadgeProps> = ({quantity, threshold}) => {
 
     // state hook
     const [status, setStatus] = useState<StockStatusType>("IN_STOCK");
+    // className de base de bootstrap
     const [colorClass, setColorClass] = useState<string>("bg-green-100 text-green-800")
 
     useEffect(() : void => {

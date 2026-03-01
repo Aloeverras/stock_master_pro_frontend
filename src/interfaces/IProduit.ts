@@ -1,6 +1,6 @@
 export interface IProduit {
     id : string,
-    npme : string,
+    name : string,
     sku : string,
     category : string,
     currentStock : number,
