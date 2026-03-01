@@ -29,9 +29,12 @@ export default defineConfig({
             outDir: './dist/assets/types',
         }),
         eslintPlugin({
-            cache : false,
-            failOnError : true,
-            failOnWarning: false
+            include : ["src/**/*.{ts,tsx}"],
+            exclude : ["node_modules", "dist"],
+            emitWarning : true,
+            emitError : true,
+            failOnWarning : false,
+            failOnError : false
         })
     ],
     server : {

@@ -1,1 +1,3 @@
-console.log("Hello world!");
+import Root from "./components/Root";
+
+Root();
