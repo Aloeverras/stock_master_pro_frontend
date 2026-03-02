@@ -1,5 +1,5 @@
 import { IProduit } from "./IProduit";
 
 export interface ProductFormProps {
-    onProductAdded : (newProduct : IProduit) => void
+    onProductAdded : (newProduct : Promise<IProduit> | IProduit) => void
 };
