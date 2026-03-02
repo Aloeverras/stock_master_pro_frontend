@@ -1,3 +1,6 @@
 export interface PorductInputProps {
-    nameLabel : string
+    labelName : string,
+    classesNameLabel : string | undefined
+    inputName : string,
+    classesNamesInput : string | undefined
 }
