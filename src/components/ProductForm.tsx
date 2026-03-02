@@ -7,6 +7,7 @@ const ProductForm : FC<ProductFormProps> = ({ onProductAdded }) => {
 
     // function
 
+    // function asychone pour la récupérartion de la data
     const handleSumit : (formData : FormData) => Promise<void> = async (formData : FormData) => {
 
         const productData : IProductData = {
