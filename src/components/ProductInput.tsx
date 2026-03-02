@@ -6,7 +6,9 @@ const ProductInput : FC<PorductInputProps> = (
         labelName, 
         classesNameLabel, 
         classesNamesInput ,
-        inputName
+        inputName,
+        primaryColor,
+        secondaryColor
     }
 ) => {
     return (
@@ -14,7 +16,7 @@ const ProductInput : FC<PorductInputProps> = (
                 <label className={`${classesNameLabel} 
                     text-xs
                     font-semibold
-                    text-grey-500
+                    text-${primaryColor}-500
                  `}>
                     {labelName}
                 </label>
@@ -23,11 +25,11 @@ const ProductInput : FC<PorductInputProps> = (
                 name={inputName}
                 className={`
                     p-3
-                    bg-grey-50
+                    bg-${primaryColor}-50
                     border-none
                     rounded-xl 
                     focus:ring-2
-                    focus:ring-blue-500
+                    focus:ring-${secondaryColor}-500
                     outline-none
                     ${classesNamesInput}
                 `}/>
