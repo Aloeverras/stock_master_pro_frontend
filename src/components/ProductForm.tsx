@@ -77,6 +77,18 @@ const ProductForm : FC<ProductFormProps> = ({ onProductAdded }) => {
                 " >
                     Nom du produit
                 </label>
+                <input 
+                type="text" 
+                name="name"
+                className="
+                    p-3
+                    bg-grey-50
+                    border-none
+                    rounded-xl 
+                    focus:ring-2
+                    focus:ring-blue-500
+                    outline-none
+                "/>
             </div>
         </form>
     );
