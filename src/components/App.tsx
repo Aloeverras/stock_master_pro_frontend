@@ -1,6 +1,7 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 import { IProduit } from "../interfaces/IProduit";
+import ProductForm from "./ProductForm";
 
 
 const App : React.FC = () => {
@@ -21,6 +22,7 @@ const App : React.FC = () => {
         <>
             // main, balise principal du project
             <main>
+
                 // component de test en action dans la balise 'main'
                 <ProductCard product={testProduit} onEdit={() => {
                     console.log("test")
@@ -31,7 +33,18 @@ const App : React.FC = () => {
                 onDelecte={() => {
                     console.log("tesy")
                 }}
-           />
+                />
+
+                // formulaire des produit à introduire
+                <ProductForm onProductAdded={
+                    (produit : IProduit | Promise<IProduit>) : void => 
+                    { 
+                        console.log(produit) 
+                    }
+                    }>
+
+                </ProductForm>
+
            </main>
         </>
     );

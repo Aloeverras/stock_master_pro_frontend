@@ -1,10 +1,10 @@
-import { FC } from "react";
+import React from "react";
 import { ProductFormProps } from "../interfaces/ProductFormProps";
 import { IProductData } from "../interfaces/IProductData";
 import { IProduit } from "../interfaces/IProduit";
 import { HandleSumitType } from "../types/alias/HandleSumitType";
 
-const ProductForm : FC<ProductFormProps> = ({ onProductAdded }) => {
+const ProductForm : React.FC<ProductFormProps> = ({ onProductAdded }) => {
 
     // function
 
@@ -32,7 +32,7 @@ const ProductForm : FC<ProductFormProps> = ({ onProductAdded }) => {
                 );
 
                 if (response.ok) {
-                    const saveProduct : Promise<IProduit> = await response.json();
+                    const saveProduct : IProduit = await response.json();
                     onProductAdded(saveProduct);
                     (document.getElementById("product-form")) as HTMLFormElement;
                 }
@@ -43,7 +43,8 @@ const ProductForm : FC<ProductFormProps> = ({ onProductAdded }) => {
     };
 
     return (
-        <form id="product-form"
+        <>
+            <form id="product-form"
             action={handleSumit}
             className="
                 bg-white
@@ -75,6 +76,7 @@ const ProductForm : FC<ProductFormProps> = ({ onProductAdded }) => {
                 </p>
             </div>
         </form>
+        </>
     );
 };
 
