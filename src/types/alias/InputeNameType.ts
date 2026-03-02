@@ -1,0 +1,1 @@
+export type InputeNameType = "name-input" | "sku-input" | "category-input" | "currentStock-input" | "minThreshold-input" | "price-input" | "lasteUpdate-input";

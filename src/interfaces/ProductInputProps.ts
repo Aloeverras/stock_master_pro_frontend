@@ -1,7 +1,9 @@
-export interface PorductInputProps {
+import { InputeNameType } from "../types/alias/InputeNameType"
+
+export interface ProductInputProps {
     labelName : "name" | "sku" | "category" | "currentStock" | "minThreshold" | "price" | "lasteUpdate",
     classesNameLabel : string | undefined 
-    inputName : "name-input" | "sku-input" | "category-input" | "currentStock-input" | "minThreshold-input" | "price-input" | "lasteUpdate-input",
+    inputName : InputeNameType,
     classesNamesInput : string | undefined,
     inputType : "text" | "number"
     primaryColor : string,

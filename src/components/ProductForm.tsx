@@ -5,6 +5,8 @@ import { IProduit } from "../interfaces/IProduit";
 
 const ProductForm : FC<ProductFormProps> = ({ onProductAdded }) => {
 
+    // function
+
     const handleSumit : (formData : FormData) => Promise<void> = async (formData : FormData) => {
 
         const productData : IProductData = {
@@ -36,6 +38,8 @@ const ProductForm : FC<ProductFormProps> = ({ onProductAdded }) => {
             console.error("Error backend Java", error)
         };
     };
+
+    
 
     return (
         <form id="product-form"

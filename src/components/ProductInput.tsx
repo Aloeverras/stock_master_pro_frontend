@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { PorductInputProps } from "../interfaces/ProductInputProps";
+import { ProductInputProps } from "../interfaces/ProductInputProps";
 
-const ProductInput : FC<PorductInputProps> = (
+const ProductInput : FC<ProductInputProps> = (
 
     { 
         labelName, 
