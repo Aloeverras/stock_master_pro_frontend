@@ -2,15 +2,19 @@ import { FC } from "react";
 import { PorductInputProps } from "../interfaces/ProductInputProps";
 
 const ProductInput : FC<PorductInputProps> = (
+
     { 
         labelName, 
         classesNameLabel, 
         classesNamesInput ,
         inputName,
+        inputType,
         primaryColor,
         secondaryColor
     }
+
 ) => {
+
     return (
         <div className="flex flex-col gap-1">
                 <label className={`${classesNameLabel} 
@@ -21,7 +25,7 @@ const ProductInput : FC<PorductInputProps> = (
                     {labelName}
                 </label>
                 <input 
-                type="text" 
+                type={inputType}
                 name={inputName}
                 className={`
                     p-3
