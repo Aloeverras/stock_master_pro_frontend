@@ -40,10 +40,43 @@ const ProductForm : FC<ProductFormProps> = ({ onProductAdded }) => {
     return (
         <form id="product-form"
             action={handleSumit}
-            className="bg-white p-6 rounded-2xl mb-8 grid grid-cols-2 gap-4 shadow-sm border border-gray-100"
+            className="
+                bg-white
+                p-6 
+                rounded-2xl 
+                mb-8 grid 
+                grid-cols-2 
+                gap-4 
+                shadow-sm 
+                border 
+                border-gray-100
+            "
         >
             <div className="col-span-2">
-                <h2 className="text-xl font-bold text-grey-800 mb-1">New Produit</h2>
+                <h2 className="
+                    text-xl 
+                    font-bold 
+                    text-grey-800 
+                    mb-1
+                ">
+                    New Produit
+                </h2>
+                <p className="
+                    text-sm
+                    text-grey-400
+                    mb-4
+                ">
+                    Remplissez les informations pour générer l'étiquette
+                </p>
+            </div>
+            <div className="flex flex-col gap-1">
+                <label className="
+                    text-xs
+                    font-semibold
+                    text-grey-500
+                " >
+                    Nom du produit
+                </label>
             </div>
         </form>
     );
