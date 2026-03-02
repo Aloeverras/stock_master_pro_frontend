@@ -1,7 +1,14 @@
 import { FC } from "react";
 import { PorductInputProps } from "../interfaces/ProductInputProps";
 
-const ProductInput : FC<PorductInputProps> = ({ labelName, classesNameLabel, classesNamesInput ,inputName }) => {
+const ProductInput : FC<PorductInputProps> = (
+    { 
+        labelName, 
+        classesNameLabel, 
+        classesNamesInput ,
+        inputName 
+    }
+) => {
     return (
         <div className="flex flex-col gap-1">
                 <label className={`${classesNameLabel} 
