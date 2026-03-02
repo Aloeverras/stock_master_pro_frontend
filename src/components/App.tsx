@@ -1,3 +1,4 @@
+import "../scss/App.scss";
 import React from "react";
 import ProductCard from "./ProductCard";
 import { IProduit } from "../interfaces/IProduit";
