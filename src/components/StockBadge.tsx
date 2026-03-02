@@ -1,4 +1,3 @@
-import "../scss/StockerBadge.scss"
 import React, { useEffect, useState } from "react";
 import { StockBadgeProps } from "../interfaces/StockBadgeProps";
 import { StockStatusType } from "../types/StockStatusType";
