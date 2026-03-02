@@ -1,0 +1,1 @@
+export type HandleSumitType = (formData : FormData) => Promise<void>;

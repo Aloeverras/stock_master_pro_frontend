@@ -2,45 +2,45 @@ import { FC } from "react";
 import { ProductFormProps } from "../interfaces/ProductFormProps";
 import { IProductData } from "../interfaces/IProductData";
 import { IProduit } from "../interfaces/IProduit";
+import { HandleSumitType } from "../types/alias/HandleSumitType";
 
 const ProductForm : FC<ProductFormProps> = ({ onProductAdded }) => {
 
     // function
 
     // function asychone pour la récupérartion de la data
-    const handleSumit : (formData : FormData) => Promise<void> = async (formData : FormData) => {
+    const handleSumit : HandleSumitType = 
+        async (formData : FormData) => {
 
-        const productData : IProductData = {
-            name : formData.get("name"),
-            sku : formData.get("sku"),
-            currentStock : Number(formData.get("currentStock")),
-            price : Number(formData.get("price")),
-            minTheshold : 5
-        };
+            const productData : IProductData = {
+                name : formData.get("name"),
+                sku : formData.get("sku"),
+                currentStock : Number(formData.get("currentStock")),
+                price : Number(formData.get("price")),
+                minTheshold : 5
+            };
 
-        try {
+            try {
 
-            const response : Response = await fetch(
-                "http://localhost:8080/api/product",
-                {
-                    method : "POST",
-                    headers : {"Content-Type" : "application/json"},
-                    body : JSON.stringify(productData)
+                const response : Response = await fetch(
+                    "http://localhost:8080/api/product",
+                    {
+                        method : "POST",
+                        headers : {"Content-Type" : "application/json"},
+                        body : JSON.stringify(productData)
+                    }
+                );
+
+                if (response.ok) {
+                    const saveProduct : Promise<IProduit> = await response.json();
+                    onProductAdded(saveProduct);
+                    (document.getElementById("product-form")) as HTMLFormElement;
                 }
-            );
 
-            if (response.ok) {
-                const saveProduct : Promise<IProduit> = await response.json();
-                onProductAdded(saveProduct);
-                (document.getElementById("product-form")) as HTMLFormElement;
-            }
-
-        } catch (error : unknown) {
-            console.error("Error backend Java", error)
-        };
+            } catch (error : unknown) {
+                console.error("Error backend Java", error)
+            };
     };
-
-    
 
     return (
         <form id="product-form"
@@ -73,27 +73,6 @@ const ProductForm : FC<ProductFormProps> = ({ onProductAdded }) => {
                 ">
                     Remplissez les informations pour générer l'étiquette
                 </p>
-            </div>
-            <div className="flex flex-col gap-1">
-                <label className="
-                    text-xs
-                    font-semibold
-                    text-grey-500
-                " >
-                    Nom du produit
-                </label>
-                <input 
-                type="text" 
-                name="name"
-                className="
-                    p-3
-                    bg-grey-50
-                    border-none
-                    rounded-xl 
-                    focus:ring-2
-                    focus:ring-blue-500
-                    outline-none
-                "/>
             </div>
         </form>
     );
