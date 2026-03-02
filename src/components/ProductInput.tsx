@@ -6,7 +6,7 @@ const ProductInput : FC<PorductInputProps> = (
         labelName, 
         classesNameLabel, 
         classesNamesInput ,
-        inputName 
+        inputName
     }
 ) => {
     return (
