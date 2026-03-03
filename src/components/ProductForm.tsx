@@ -3,6 +3,7 @@ import { ProductFormProps } from "../interfaces/ProductFormProps";
 import { IProductData } from "../interfaces/IProductData";
 import { IProduit } from "../interfaces/IProduit";
 import { HandleSumitType } from "../types/alias/HandleSumitType";
+import ProductInput from "./ProductInput";
 
 const ProductForm : React.FC<ProductFormProps> = ({ onProductAdded }) => {
 
@@ -74,6 +75,15 @@ const ProductForm : React.FC<ProductFormProps> = ({ onProductAdded }) => {
                 ">
                     Remplissez les informations pour générer l'étiquette
                 </p>
+            </div>
+            <div>
+                <ProductInput labelName = "name"
+                    classesNameLabel = "" 
+                    classesNamesInput =""
+                    inputName = "name-input"
+                    inputType = "text"
+                    primaryColor = "blue"
+                    secondaryColor = "grey"/>
             </div>
         </form>
         </>

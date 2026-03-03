@@ -1,16 +1,16 @@
-import { FC } from "react";
+import React, {FC} from  "react";
 import { ProductInputProps } from "../interfaces/ProductInputProps";
 
 const ProductInput : FC<ProductInputProps> = (
 
     { 
-        labelName, 
-        classesNameLabel, 
-        classesNamesInput ,
-        inputName,
-        inputType,
-        primaryColor,
-        secondaryColor
+        labelName = "name", 
+        classesNameLabel = "", 
+        classesNamesInput ="",
+        inputName = "name-input",
+        inputType = "text",
+        primaryColor = "blue",
+        secondaryColor = "grey"
     }
 
 ) => {
