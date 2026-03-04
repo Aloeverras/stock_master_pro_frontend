@@ -1,5 +1,5 @@
 import React, {FC} from  "react";
-import { ProductInputProps } from "../interfaces/ProductInputProps";
+import { ProductInputProps } from "../../interfaces/props/ProductInputProps";
 
 const ProductInput : FC<ProductInputProps> = (
 

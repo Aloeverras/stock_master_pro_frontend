@@ -1,4 +1,4 @@
-import { IProduit } from "./IProduit";
+import { IProduit } from "../IProduit";
 
 export interface ProductCardProps {
     product : IProduit,

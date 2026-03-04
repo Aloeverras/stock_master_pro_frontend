@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { StockBadgeProps } from "../interfaces/StockBadgeProps";
-import { StockStatusType } from "../types/StockStatusType";
+import { StockBadgeProps } from "../../interfaces/props/StockBadgeProps";
+import { StockStatusType } from "../../types/StockStatusType";
 
 const StockBadge : React.FC<StockBadgeProps> = ({quantity, threshold}) => {
 

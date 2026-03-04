@@ -1,4 +1,4 @@
-import { InputeNameType } from "../types/alias/InputeNameType"
+import { InputeNameType } from "../../types/alias/InputeNameType"
 
 export interface ProductInputProps {
     labelName : "name" | "sku" | "category" | "currentStock" | "minThreshold" | "price" | "lasteUpdate",

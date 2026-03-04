@@ -1,5 +1,5 @@
 import React from "react"
-import { ParagrapheProps } from "../interfaces/ParagrapheProps";
+import { ParagrapheProps } from "../interfaces/props/ParagrapheProps";
 
 
 const PargrapheComponent : React.FC<ParagrapheProps> = ({ text = "" }) => {

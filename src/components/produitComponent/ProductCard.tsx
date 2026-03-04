@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductCardProps } from "../interfaces/ProductCardProps";
+import { ProductCardProps } from "../../interfaces/props/ProductCardProps";
 import StockBadge from "./StockBadge";
 
 const ProductCard : React.FC<ProductCardProps> = ({ product, onEdit, onDelecte }) => {

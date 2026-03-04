@@ -1,8 +1,8 @@
 import React from "react";
-import { ProductFormProps } from "../interfaces/ProductFormProps";
-import { IProductData } from "../interfaces/IProductData";
-import { IProduit } from "../interfaces/IProduit";
-import { HandleSumitType } from "../types/alias/HandleSumitType";
+import { ProductFormProps } from "../../interfaces/props/ProductFormProps";
+import { IProductData } from "../../interfaces/IProductData";
+import { IProduit } from "../../interfaces/IProduit";
+import { HandleSumitType } from "../../types/alias/HandleSumitType";
 import ProductInput from "./ProductInput";
 
 const ProductForm : React.FC<ProductFormProps> = ({ onProductAdded }) => {
