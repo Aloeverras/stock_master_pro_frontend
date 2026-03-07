@@ -1,0 +1,1 @@
+export type LightType = "light" | "medium" | "dark";

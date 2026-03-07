@@ -1,5 +1,7 @@
 import React  from "react";
-import HeaderApp  from "./HeaderApp"
+import HeaderApp from "./HeaderApp";
+
+
 
 const App : React.FC = 
 
@@ -7,7 +9,7 @@ const App : React.FC =
 
         return (
             <div id="app-container">
-                <HeaderApp></HeaderApp>
+                <HeaderApp></HeaderApp> 
                 <main></main>
                 <footer></footer>
             </div>
