@@ -1,4 +1,4 @@
 export interface BaseProps {
-    id : string;
-    classNames : string
+    id : string | undefined;
+    classNames : string | undefined
 }
