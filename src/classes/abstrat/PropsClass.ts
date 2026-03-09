@@ -1,4 +1,5 @@
 import { CSSProperties, ReactNode } from "react";
+import { PropsType } from "../../types/props/PropsType";
 
 export default abstract class PropsClass<T> {
     protected id? : string;
@@ -30,7 +31,7 @@ export default abstract class PropsClass<T> {
 
     // abstrat
 
-    public abstract toDictProps() : T;
+    public abstract toDictProps() : PropsType & T
 
     // getters
 
@@ -60,5 +61,31 @@ export default abstract class PropsClass<T> {
 
     public get getIsDisabled() : boolean | undefined {
         return this.isDisabled;
+    };
+
+    // setters
+
+    public set setChildren(newChildren : ReactNode ){
+        this.children = newChildren;
+    };
+
+    public set setIdProps(newId : string) {
+        this.id = newId;
+    };
+
+    public set setClassName(newClassName : string) {
+        this.className = newClassName;
+    };
+
+    public set setStyle(newStyle : CSSProperties) {
+        this.style = newStyle;
+    };
+
+    public set setIsLoading(newIsLoading : boolean) {
+        this.isLoading = newIsLoading;
+    };
+
+    public set setIsDisabled(newIsDisabled : boolean){
+        this.isDisabled = newIsDisabled;
     }
 };
