@@ -28,6 +28,10 @@ export default abstract class PropsClass<T> {
         this.isDisabled = isDisabled;
     };
 
+    // abstrat
+
+    public abstract toDictProps() : T;
+
     // getters
 
     public get getData() : T | undefined {
