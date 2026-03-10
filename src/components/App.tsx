@@ -16,7 +16,7 @@ const App : React.FC =
                 <main>
                     {
                         <StockStatus.Provider value="OUT_OF_STOCK">
-
+                            <p>Test dans le context react {React.useContext(StockStatus)}</p>
                         </StockStatus.Provider>
                     }
                 </main>
