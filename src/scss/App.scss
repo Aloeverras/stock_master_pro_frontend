@@ -1,5 +1,3 @@
-
-
 * {
     margin : 0;
     padding : 0;
@@ -9,4 +7,49 @@
 
 #root {
     text-align : center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+        section {   
+            border-radius: 5px ; 
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            h1 {
+                font-size: 2.5rem;
+                font-weight: bold; /* Très fin */
+                color: #fcfeff;
+                letter-spacing: 2px;
+                text-transform: lowercase; /* Donne un côté "designer" très moderne */
+                margin: 0;
+            }
+        }
+
+        main {
+            flex: 1 0 auto;
+
+            h2 {
+                font-size: 1.8rem;
+                color: #2d3436;
+                border-left: 5px solid #00cec9; /* Petite barre d'accent sur le côté */
+                background-color: #d8e2e2;
+                padding-left: 15px;
+                margin-bottom: 20px;
+                font-weight: 600;
+            }
+
+        }
+
+        footer {
+            flex-shrink: 0;
+            p {
+                font-size: 0.85rem; 
+                color: #636e72;    
+                letter-spacing: 0.5px;
+                margin: 0;
+            }
+        }
 };

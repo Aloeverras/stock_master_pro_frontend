@@ -1,27 +1,42 @@
+import "../scss/App.scss"
 import React  from "react";
-import HeaderApp from "./HeaderApp";
-import StockStatusContext from "../hooks/context/StockStatusContext";
-import { StockStatusType } from "../types/StockStatusType";
+import FormulaireComponent from "./FormulaireComponent";
+
+type FuncClassNameType = () => string;
+
+
+const headerClassName  : FuncClassNameType = () => "bg-dark text-white p-3 shadow-sm";
+const mainClassName : FuncClassNameType = () => "flex-fill container py-4";
+const footerClassName : FuncClassNameType = () => "bg-light border-top py-3 text-center";
 
 const App : React.FC = 
 
     () : React.JSX.Element => {
 
-        const StockStatus : React.Context<StockStatusType> = StockStatusContext();
-
-
         return (
-            <div id="app-container">
-                <HeaderApp></HeaderApp> 
-                <main>
-                    {
-                        <StockStatus.Provider value="OUT_OF_STOCK">
-                            <p>Test dans le context react {React.useContext(StockStatus)}</p>
-                        </StockStatus.Provider>
-                    }
+            <>
+                <header 
+                    id="header-app" 
+                    className={headerClassName()}
+                >
+                    <section>
+                        <h1>
+                            Stocker master <span><strong>pro</strong></span> !
+                        </h1>
+                    </section>
+                </header>
+                
+                <main className={mainClassName()}>
+                    <section>
+                        <h2>Formulaire du produit</h2>
+                        <FormulaireComponent/>
+                    </section>
                 </main>
-                <footer></footer>
-            </div>
+
+                <footer className={footerClassName()}>
+                    <p>&#60;/&#62; 2026 - Codé avec passion par Aloes DENEVE &copy;</p>
+                </footer>
+            </>
         );
     
 };
