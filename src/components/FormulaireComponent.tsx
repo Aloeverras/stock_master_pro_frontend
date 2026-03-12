@@ -6,7 +6,9 @@ const FormulaireComponent : React.FC = () : React.JSX.Element => {
         <>
             <section id="section-form">
                 <h3>Ajouter votre produit</h3>
-                <form action=""></form>
+                <form>
+                    
+                </form>
             </section>
         </>
     );
