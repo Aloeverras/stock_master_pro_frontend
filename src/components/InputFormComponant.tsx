@@ -27,10 +27,20 @@ const InputFormComponant : React.FC<InputStokerType> = (
             </label>
 
             <input
+
+                // nom de la class général
                 className="inputComponent"
+
+                // le type ne doit pas changer
                 type="text"
+
+                // le nom s'accord à une des clé
                 name={nameInputComponent}
+
+                // valeur d'un des clé
                 value={getValue(valueInputComponent)}
+
+                // function général
                 onChange={handleChangeFunc}
             />
         </p>

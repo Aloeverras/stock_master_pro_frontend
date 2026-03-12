@@ -19,11 +19,13 @@ const FormulaireComponent : React.FC = () : React.JSX.Element => {
                     <fieldset>
 
                         <legend>
-                            Information général
+                            
+                            Informations générales
+
                         </legend>
 
                          <InputFormComponant nameInputComponent="id" valueInputComponent="" handleChangeFunc={() => {}}/>
-                         
+
                     </fieldset>
                    
                 </form>
