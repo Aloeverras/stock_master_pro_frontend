@@ -1,0 +1,1 @@
+export type InputComponentValutType = string | number | Date;
