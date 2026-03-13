@@ -1,1 +1,0 @@
-export type SigmoideAsynType = (n : number) => Promise<number>;

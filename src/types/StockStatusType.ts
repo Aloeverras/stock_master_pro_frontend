@@ -1,1 +1,0 @@
-export type StockStatusType = "IN_STOCK" | "LOW_SCTOCK" | "OUT_OF_STOCK";
