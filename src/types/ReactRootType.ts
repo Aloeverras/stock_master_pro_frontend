@@ -1,0 +1,1 @@
+export type ReactRootType = (rootElement : HTMLElement | null) => void;

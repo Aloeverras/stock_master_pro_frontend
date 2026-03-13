@@ -10,12 +10,18 @@
                 "burkeholland.simple-react-snippets",
                 "ms-vscode.js-debug-nightly",
                 "esbenp.prettier-vscode",
-                "dbaeumer.vscode-eslint"
+                "dbaeumer.vscode-eslint",
+                "github.copilot-chat",
+                "usernamehw.errorlens",
+                "dsznajder.es7-react-js-snippets",
+                "naumovs.color-highlight",
+                "formulahendry.auto-rename-tag",
+                "meganrogge.template-string-converter"
             ],
             "settings": {
                 "terminal.integrated.defaultProfile.linux": "sh",
                 "editor.formatOnSave": true,
-                "typescript.autoClosingTags": true
+                "workbench.iconTheme": "material-icon-theme"
             }
         }
     }
